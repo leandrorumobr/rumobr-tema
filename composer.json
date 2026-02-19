@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Nunes\\RumobrTema\\RumobrTemaServiceProvider\\src"
+                "Nunes\\RumobrTema\\RumobrTemaServiceProvider"
             ]
         }
     },
