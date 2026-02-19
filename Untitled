@@ -1,0 +1,79 @@
+# Tema Rumo BR
+
+Componentes Vue 3 e CSS para projetos Laravel.
+
+## Requisitos
+
+- PHP 8.1+
+- Laravel 10.0+
+- Vue 3.3+
+
+## Instalação
+
+```bash
+composer require nunes/tema-rumo-br
+php artisan tema-rumo:publish
+npm run build
+```
+
+## Componentes
+
+### Button
+
+```vue
+<rumo-button variant="primary" size="lg" @click="handleClick">
+  Clique aqui
+</rumo-button>
+```
+
+**Props:**
+- `variant`: primary | secondary | danger | success (padrão: primary)
+- `size`: sm | md | lg (padrão: md)
+- `disabled`: boolean (padrão: false)
+
+### Card
+
+```vue
+<rumo-card shadow>
+  <template #header>
+    Título
+  </template>
+  <p>Conteúdo</p>
+  <template #footer>
+    Rodapé
+  </template>
+</rumo-card>
+```
+
+### Modal
+
+```vue
+<rumo-modal v-model="showModal" title="Título">
+  <p>Conteúdo do modal</p>
+  <template #footer>
+    <rumo-button @click="showModal = false">Fechar</rumo-button>
+  </template>
+</rumo-modal>
+```
+
+## Uso em app.js
+
+```javascript
+import { createApp } from 'vue';
+import RumoButton from '@/components/tema-rumo/Button.vue';
+import RumoCard from '@/components/tema-rumo/Card.vue';
+import RumoModal from '@/components/tema-rumo/Modal.vue';
+import '@/css/vendor/tema-rumo/components.css';
+
+const app = createApp({});
+
+app.component('RumoButton', RumoButton);
+app.component('RumoCard', RumoCard);
+app.component('RumoModal', RumoModal);
+
+app.mount('#app');
+```
+
+## Licença
+
+MIT

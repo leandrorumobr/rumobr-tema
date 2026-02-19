@@ -1,29 +1,56 @@
 {
     "name": "nunes/rumobr-tema",
-    "description": "Tema padrão para ser utilizado em todos os projetos interno e externos da Rumobr Tecnologia (www.rumobr.com.br)",
+    "description": "Componentes Vue 3 e CSS para Laravel - Tema Rumo BR",
     "type": "library",
     "license": "MIT",
-    "authors": [
-      {
-        "name": "Leandro Nunes",
-        "email": "leandro@rumobr.com.br"
-      }
+    "keywords": [
+        "laravel",
+        "vue",
+        "components",
+        "tema",
+        "ui"
     ],
+    "authors": [
+        {
+            "name": "Leandro Nunes",
+            "email": "leandro.nunes@rumobr.com",
+            "homepage": "https://github.com/leandrorumobr"
+        }
+    ],
+    "homepage": "https://github.com/leandrorumobr/rumobr-tema",
+    "support": {
+        "issues": "https://github.com/leandrorumobr/rumobr-tema/issues",
+        "source": "https://github.com/leandrorumobr/rumobr-tema"
+    },
     "require": {
-      "php": "^8.1",
-      "laravel/framework": "^11.0|^12.0"
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "laravel/pint": "^1.0"
     },
     "autoload": {
-      "psr-4": {
-        "Nunes\\RumobrTema\\": "src/"
-      }
+        "psr-4": {
+            "Nunes\\TemaRumoBr\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nunes\\RumobrTema\\Tests\\": "tests/"
+        }
     },
     "extra": {
-      "laravel": {
-        "providers": [
-          "Nunes\\RumobrTema\\RumobrTemaServiceProvider"
-        ]
-      }
+        "laravel": {
+            "providers": [
+                "Nunes\\RumobrTema\\RumobrTemaServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit",
+        "format": "pint"
     }
-  }
-  
+}
