@@ -1,6 +1,6 @@
 {
     "name": "nunes/rumobr-tema",
-    "description": "Componentes Vue 3 e CSS para Laravel - Tema Rumo BR",
+    "description": "Tema padrão para ser utilizado em todos os projetos interno e externos da Rumobr Tecnologia (www.rumobr.com.br)",
     "type": "library",
     "license": "MIT",
     "keywords": [
