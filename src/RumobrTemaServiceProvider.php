@@ -8,9 +8,7 @@ class RumobrTemaServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/Config/vue-components.php', 'meu-pacote-vue'
-        );
+        // Configurações podem ser adicionadas aqui se necessário
     }
 
     public function boot()
